@@ -5,29 +5,29 @@
 program main
 implicit none
 
-integer::n						      ! number of delayed neutron
-real*8,allocatable::lambda(:)	   ! decay constant
-real*8,allocatable::beta(:)		! effective delayed neutron fraction
-real*8::q						      ! neutron source
-real*8::betaAll					   ! effective delayed neutron total fraction
-real*8::age						      ! prompt neutron generation time
-real*8::reacn,reaco				   ! reactivity
-real*8,external::reac			   ! function of reactivity
-real*8::nt						      ! neutron flux
-real*8,allocatable::Cit(:)		   ! delayed neutron precursors
-real*8::nt1						      ! derivative of neutron flux with time
-real*8::dt						      ! time step
-real*8::totaltime				      ! total problem time
-real*8::time					      ! current time
-real*8::editt					      ! edit time
-real*8,allocatable::G1i(:)		   !-------------
-real*8,allocatable::G2i(:)		   !
-real*8::F1						      !
-real*8::F2						      ! intermediate variable
-real*8::tave					      !	
-real*8::tn						      !
+integer::neutron                    ! number of delayed neutron
+real*8,allocatable::lambda(:)       ! decay constant
+real*8,allocatable::beta(:)         ! effective delayed neutron fraction
+real*8::q                           ! neutron source
+real*8::betaAll                     ! effective delayed neutron total fraction
+real*8::age                         ! prompt neutron generation time
+real*8::reacn,reaco                 ! reactivity
+real*8,external::reac               ! function of reactivity
+real*8::nt                          ! neutron flux
+real*8,allocatable::Cit(:)          ! delayed neutron precursors
+real*8::nt1                         ! derivative of neutron flux with time
+real*8::dt                          ! time step
+real*8::totaltime                   ! total problem time
+real*8::time                        ! current time
+real*8::editt                       ! edit time
+real*8,allocatable::G1i(:)          !-------------
+real*8,allocatable::G2i(:)          !
+real*8::F1                          !
+real*8::F2                          ! intermediate variable
+real*8::tave                        !	
+real*8::tn                          !
 real*8::m1,m2,m3,m4,m5,m6,m7,m8,m9
-integer::j1,j2,j3				      !--------------
+integer::j1,j2,j3                   !--------------
 
 ! --- step1: parameters setting ---
 n=6
